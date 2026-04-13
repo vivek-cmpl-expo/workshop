@@ -1,0 +1,194 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,300;1,9..144,400;1,9..144,600&family=DM+Sans:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --color-primary: #1A2E44;
+  --color-accent: #C8963E;
+  --color-background: #F5F4F0;
+  --color-surface: #FFFFFF;
+  --color-foreground: #1A2E44;
+  --color-muted: #6B7A8D;
+  --color-border: #DDD9D0;
+  --color-gold-light: #F0E6CE;
+  --color-navy-light: #E8EDF2;
+
+  /* Workshop accent colors */
+  --color-banawat: #7C3AED;
+  --color-launchpad: #0F766E;
+  --color-savore: #B45309;
+  --color-unpack: #1D4ED8;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+.font-display {
+  font-family: 'Fraunces', serif;
+}
+
+/* Reveal animations */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform, opacity;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-delay-1 { transition-delay: 100ms; }
+.reveal-delay-2 { transition-delay: 200ms; }
+.reveal-delay-3 { transition-delay: 300ms; }
+.reveal-delay-4 { transition-delay: 400ms; }
+
+/* Workshop card hover */
+.workshop-card {
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.workshop-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 60px -10px rgba(26, 46, 68, 0.15);
+}
+
+/* Timeline dots */
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -1px;
+  top: 0;
+  width: 2px;
+  height: 100%;
+  background: var(--color-border);
+}
+
+/* Sticky nav scroll state */
+.nav-scrolled {
+  box-shadow: 0 1px 0 var(--color-border);
+}
+
+/* Station cards */
+.station-card {
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.station-card:hover {
+  border-color: var(--color-accent);
+  background-color: var(--color-surface);
+}
+
+/* Table styles */
+.data-table th {
+  background-color: var(--color-primary);
+  color: white;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.75rem 1rem;
+}
+
+.data-table td {
+  padding: 0.875rem 1rem;
+  border-bottom: 1px solid var(--color-border);
+  font-size: 0.875rem;
+  vertical-align: top;
+}
+
+.data-table tr:last-child td {
+  border-bottom: none;
+}
+
+.data-table tr:hover td {
+  background-color: var(--color-navy-light);
+}
+
+/* Myth card */
+.myth-card {
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.myth-card:hover {
+  transform: translateY(-2px);
+}
+
+/* Tag pill */
+.tag-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.75rem;
+  border-radius: 2px;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-family: 'DM Sans', sans-serif;
+}
+
+/* Stat number */
+.stat-number {
+  font-family: 'Fraunces', serif;
+  font-weight: 300;
+  line-height: 1;
+}
+
+/* Section label */
+.section-label {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+}
+
+/* Horizontal rule accent */
+.hr-accent {
+  border: none;
+  height: 2px;
+  background: linear-gradient(to right, var(--color-accent), transparent);
+  margin: 0;
+}
+
+/* Block number badge */
+.block-badge {
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1.5px solid var(--color-border);
+  font-size: 0.75rem;
+  font-weight: 600;
+  font-family: 'DM Sans', sans-serif;
+  color: var(--color-muted);
+  flex-shrink: 0;
+}
+
+/* Print / no-js fallback */
+@media print {
+  .no-print { display: none; }
+}
