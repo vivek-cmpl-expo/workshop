@@ -8,34 +8,33 @@ const blocks = [
   {
     number: '01',
     title: 'The Provocation',
-    desc: 'The session opens with one statement that reframes everything you think you know about sustainable packaging. No slides. No intro. Just the line — and what it means for the room.',
-    tag: 'Surprise',
+    desc: 'The session opens with one statement that dismantles the biggest assumption in packaging today. Not a slide. Not a statistic. Just the line — and what it means for every brief you\'ll write after this.',
+    tag: 'Reframe',
   },
   {
     number: '02',
     title: 'Myth Busting',
-    desc: 'Five of the most commonly held beliefs about packaging — rapidly dismantled. Paper vs. plastic. Recycling symbols. Bio-based vs. biodegradable. Weight and premiumness. Consumer willingness to pay. Show of hands, expert reveals, no hand-holding.',
+    desc: 'Five of the most dangerous beliefs in packaging — rapidly taken apart. Paper vs plastic. Weight and premiumness. Bio-based vs biodegradable. Recycling symbols. Consumer willingness to pay. Show of hands, expert reveals, no hand-holding.',
     tag: 'Debate',
   },
   {
     number: '03',
     title: 'Touch & See',
-    desc: 'A physical sample kit lands on every table before the first slide. rPET vs. virgin PET. Monomaterial vs. multilayer pouch. Lightweighted bottles. Ocean-captured plastic. Paper-based formats. Refill and reuse. You handle each one, ask the questions, and find out what you were wrong about.',
+    desc: 'A physical material kit lands on every table before the first slide. rPET. Ocean-captured plastic. PCR formats. Monomaterial structures. Lightweighted bottles. Paper-based and fibre formats. Refill and reuse systems. You handle each one. You feel the difference. You find out which ones you were wrong about — and why material technology has made the trade-off argument obsolete.',
     tag: 'Touch',
     highlight: 'This is the part of the session people talk about afterwards.',
   },
   {
     number: '04',
     title: 'Grade Your Pack ★',
-    desc: 'Five everyday products on every table — shampoo bottle, snack wrapper, coffee cup lid, detergent pouch, supplement jar. Two minutes, no phones, no discussion. Grade each one A, B, or C for recyclability and mark whether it will be legally compliant post-2026. Then the table debates. Then the reveal.',
+    desc: 'Five everyday products on every table — shampoo bottle, snack wrapper, coffee cup lid, detergent pouch, supplement jar. Grade each one for recyclability, shelf appeal, and premium perception. Then the table debates. Then the reveal.',
     tag: 'Act',
-    highlight:
-      'Almost everyone gets two or more wrong — including the ones they were most confident about.',
+    highlight: 'Almost everyone gets two or more wrong — including the ones they were most confident about.',
   },
   {
     number: '05',
-    title: 'Compliance Briefing',
-    desc: 'Four regulations. Four dates. One-line implication each. No jargon, no slide-reading.',
+    title: 'The Design × Compliance Matrix',
+    desc: 'Four global packaging standards. Four compliance deadlines. One design implication each. Not a policy briefing — a design challenge. For each regulation, you answer: what would a pack that meets this standard and elevates the brand actually look like?',
     tag: 'Act',
     compliance: [
       { rule: 'EU PPWR Recyclability Grading', date: 'August 2026' },
@@ -43,12 +42,11 @@ const blocks = [
       { rule: 'EU PPWR 50% Empty Space Rule', date: '2030' },
       { rule: 'UK Deposit Return Scheme', date: 'October 2027' },
     ],
-    highlight: 'You leave with a printed reference card.',
   },
   {
     number: '06',
-    title: 'What Would You Kill?',
-    desc: "No slides. No structure. Open floor. If you could kill one packaging format that still dominates shelves today — what would it be and why? Experts don't just facilitate this one. They participate. The room leads. Hot takes are welcome.",
+    title: 'Build for the Brief',
+    desc: "Open floor. One brief. No structure. If you were launching a new FMCG product tomorrow — what pack would you build? What material? What format? What does it say about the brand before the consumer even opens it? Experts don't just facilitate this one. They build alongside you.",
     tag: 'Debate',
   },
 ];
@@ -66,7 +64,7 @@ const speakers = [
       'Specialist in sensorial design & premium consumer experience',
       'Hands-on: smart, functional & sustainable packaging systems',
     ],
-    focusAreas: ['Sensorial design', 'D2C packaging', 'Sustainable systems'],
+    focusAreas: ['Sensorial Design', 'Premium Pack Strategy', 'Sustainable D2C Systems'],
   },
   {
     initials: 'VD',
@@ -78,9 +76,9 @@ const speakers = [
     bullets: [
       'Global leader in rigid plastic packaging — rPET, PCR & lightweighting',
       'Pioneer of Integrated Manufacturing with Unilever in India',
-      'Expert: sustainable packaging transition & circularity at scale',
+      'Expert in sustainable packaging transition, material innovation & circularity at scale',
     ],
-    focusAreas: ['rPET', 'PCR production', 'Lightweighting', 'Circularity'],
+    focusAreas: ['rPET', 'PCR', 'Material Innovation', 'Circularity', 'Lightweighting'],
   },
 ];
 
@@ -137,10 +135,10 @@ export default function UnpackHero() {
                 <Image src="/assets/logo/workshop_logos/UNPACK.png" alt="UNPACK" height={64} width={200} className="h-16 w-auto object-contain" />
               </div>
               <p className="font-display font-light italic text-2xl sm:text-3xl text-foreground leading-tight mb-2 reveal reveal-delay-1">
-                Does Your Pack Make the Grade?
+                Premium by Design. Sustainable by Intent.
               </p>
               <p className="font-display font-light italic text-xl text-muted leading-tight reveal reveal-delay-2">
-                The Packaging on Your Shelf May Already Be Illegal
+                Where Material Technology, Design & Innovation Come Together to Build the Pack Your Product Deserves.
               </p>
             </div>
 
@@ -150,7 +148,7 @@ export default function UnpackHero() {
               style={{ borderRadius: '0 2px 2px 0' }}
             >
               <p className="font-display font-light italic text-lg sm:text-xl text-foreground leading-relaxed">
-                "The packaging sitting on your shelf right now may already be illegal in 18 months."
+                "The brands winning on shelf aren't choosing between premium and sustainable. They've stopped seeing them as a trade-off."
               </p>
             </div>
 
@@ -159,15 +157,16 @@ export default function UnpackHero() {
               <p className="section-label mb-4">About the Workshop</p>
               <div className="space-y-4 text-base font-sans text-muted leading-relaxed">
                 <p>
-                  Not because you did something wrong — but because the rules are changing faster
-                  than most brands are tracking, and the gap between what brands assume about their
-                  packaging and what is actually true is wider than anyone wants to admit.
+                  Most packaging briefs start in the wrong place. They begin with cost. Or compliance. Or a recycling target someone handed down from marketing. And the result is a pack that ticks boxes but doesn't sell the product — one that feels like a compromise before it even hits the shelf.
                 </p>
                 <p>
-                  UNpack is a hands-on working session that closes that gap. No slide decks, no
-                  abstract policy. Real materials in your hands, real products on your table, real
-                  compliance deadlines that apply to your business — and a room full of people
-                  figuring out the same thing you are.
+                  The conversation needs to start somewhere else entirely: with material technology, with design intent, and with a clear understanding of what great packaging can actually do for a brand in 2026.
+                </p>
+                <p>
+                  Because sustainability isn't a material choice you make at the end of a brief. It's the outcome of getting design and innovation right from the beginning. And when you get that right, you don't sacrifice premiumness. You unlock it.
+                </p>
+                <p>
+                  UNPACK is a 2-hour hands-on working session that puts that thinking into practice. Six blocks. Real materials in your hands. Real products on your table. Real benchmarks that push you to build packs that don't just meet a standard — they set one.
                 </p>
               </div>
             </div>
@@ -231,9 +230,10 @@ export default function UnpackHero() {
               <p className="section-label mb-4">What You Leave With</p>
               <div className="space-y-3">
                 {[
-                  'A scoring card with the real grades filled in.',
-                  'A compliance reference card with four regulations and four dates you can act on immediately.',
-                  'A much clearer answer to the question you walked in with — does your pack make the grade?',
+                  'A scoring card with real grades — for the products on the table and the thinking you walked in with.',
+                  'A compliance reference card with 4 regulations, 4 dates, and 1 design implication each.',
+                  'A framework for writing briefs that start with design intent — and end with packs that are premium, sustainable, and commercially winning.',
+                  'A much clearer answer to the question that actually matters: not "does my pack comply" — but "does my pack do justice to the product inside it?"',
                 ].map((item, i) => (
                   <div key={i} className="flex items-start gap-3">
                     <span className="mt-2 w-1.5 h-1.5 rounded-full bg-unpack flex-shrink-0" />
@@ -253,7 +253,7 @@ export default function UnpackHero() {
                   'Sustainability Leads',
                   'Manufacturers',
                   'Buyers',
-                  'Anyone who has ever approved what goes on a pack',
+                  'Anyone who has ever approved what goes on a pack — or wishes they\'d questioned it sooner',
                 ].map((r) => (
                   <span
                     key={r}
@@ -275,7 +275,7 @@ export default function UnpackHero() {
                 ))}
               </div>
               <p className="text-xs font-sans text-muted mt-4 italic">
-                One manufacturer. One brand. Both in the room with you.
+                One brand. One manufacturer. Both thinking about the same pack from opposite ends — both in the room with you.
               </p>
             </div>
           </div>
@@ -297,7 +297,7 @@ export default function UnpackHero() {
                     {
                       icon: '🧱',
                       label: 'Format',
-                      value: '6 Blocks · Surprise | Touch | Debate | Act',
+                      value: '6 Blocks · Reframe | Touch | Debate | Act | Build',
                     },
                   ].map((d) => (
                     <div key={d.label} className="flex items-start gap-3">
@@ -345,6 +345,9 @@ export default function UnpackHero() {
             </div>
           </div>
         </div>
+      </div>
+      <div className="max-w-8xl mx-auto px-6 lg:px-10 py-6">
+        <p className="text-base font-sans text-muted italic text-center">Workshop content and speakers may be updated as needed, while the overarching theme remains intact.</p>
       </div>
     </section>
   );

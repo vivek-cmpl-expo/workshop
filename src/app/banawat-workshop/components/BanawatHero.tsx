@@ -4,21 +4,54 @@ import Link from 'next/link';
 import Image from 'next/image';
 import SpeakerCard from '@/components/SpeakerCard';
 
-const stations = [
+const blocks = [
   {
-    icon: '🧪',
-    label: 'Science',
-    desc: 'Is the claim defensible? What does the evidence actually say?',
+    number: '01',
+    title: 'The Crisis Scenario',
+    tag: 'Reframe',
+    desc: "The session opens inside a war room. A fictional BPC brand is under fire — a neuroscience-based skincare claim has been called out, and the formula, science, and packaging all gave different answers. You're placed inside that brand's team, working to diagnose what broke and decide what to do. No slides. No intro. Just the problem.",
   },
   {
-    icon: '🧴',
-    label: 'Formulation',
-    desc: 'Can the formula support the claim? What would it take to fix it?',
+    number: '02',
+    title: 'Inside the Industry',
+    tag: 'Real Talk',
+    desc: "Two practitioners who sit across hundreds of briefs, pitches, and formulation conversations share what they're actually seeing — the patterns behind failed claims, delisted products, and the questions founders should have asked before launch but didn't.",
   },
   {
-    icon: '📦',
-    label: 'Brand & Packaging',
-    desc: 'Where did communication break down? What does the brand do now?',
+    number: '03',
+    title: 'Case Studies: What Went Wrong',
+    tag: 'Learn',
+    desc: 'Four real scenarios. An Ayurvedic brand with a clean claim and an INCI list that told a different story. An SPF 50+ product that tested at 14.98. A beauty product with packaging that trapped the formula. A brand delisted by a major retailer over missing regulatory details. Each one unpacked — what went wrong, why, and what the fix would have been.',
+  },
+  {
+    number: '04',
+    title: 'Live Founder on Stage',
+    tag: 'Act',
+    desc: "A founder — launched or close to launch — brings their product into the room. Their hero claim, their biggest worry, and the thing they'd be most nervous a sharp buyer would notice. Experts respond in real time: is that nervousness justified, and what would it actually take to close the gap? One clear action to walk out with.",
+  },
+  {
+    number: '05',
+    title: 'New Era of Product Development',
+    tag: 'Build',
+    desc: 'What does the next generation of Indian BPC actually look like? Two emerging directions: neurocosmetics and inside-out formulation — building the product from efficacy backwards. And packaging that is a product decision, not a supply chain decision. What it takes to build for both.',
+  },
+  {
+    number: '06',
+    title: 'How to Read a Label',
+    tag: 'Decode',
+    desc: 'INCI order equals concentration. How to estimate percentages without disclosed numbers. A claims vs. INCI reality decoder. What certifications actually mean vs. what they imply. Closes with a live 60-second label audit on a real product in the room.',
+  },
+  {
+    number: '07',
+    title: 'Own Your Formula',
+    tag: 'Defend',
+    desc: "Why your formula is your most defensible asset — and how to treat it like one. What's coming out of Paris that will hit Indian shelves next. And why AI-generated formulations need a real formulator's eye before they go anywhere near production.",
+  },
+  {
+    number: '08',
+    title: 'Red Flag or Green Flag',
+    tag: 'Play',
+    desc: 'A live audience game. 15 claims across formulation, packaging, and certifications — covering hero actives, sustainability language, dosage claims and certifications. Cards up simultaneously, reveal after 20 seconds. No wrong answers. Debate is the point.',
   },
 ];
 
@@ -29,7 +62,7 @@ const speakers = [
     image: '/assets/images/banawat/SARVANGI.png',
     name: 'Sarvangi Shah',
     role: 'Founder',
-    company: 'Noya Beauty Works',
+    company: 'Noya Beauty Works (NBW)',
     bullets: [
       'Launched over 131 SKUs across BPC categories',
       'Shaped product strategy at Nykaa and MyGlamm',
@@ -41,8 +74,8 @@ const speakers = [
     initials: 'ML',
     initialsColor: '#7C3AED',
     image: '/assets/images/banawat/MOHIT.png',
-    name: 'Dr. Mohit Lalwani',
-    role: 'MD',
+    name: 'Dr. Mohit Lalvani',
+    role: 'Managing Director',
     company: 'Mascot Spincontrol Universal',
     bullets: [
       'Deep expertise across skin, hair, and pet health formulation',
@@ -115,62 +148,82 @@ export default function BanawatHero() {
                 />
               </div>
               <p className="font-display font-light italic text-2xl sm:text-3xl text-foreground leading-tight mb-2 reveal reveal-delay-1">
-                Building the Next Generation Indian BPC Product — From the Inside Out
+                Your Claim Is on Pack. Can You Defend It?
               </p>
               <p className="font-display font-light italic text-xl text-muted leading-tight reveal reveal-delay-2">
-                Your Claim Is on Pack. Can You Defend It?
+                Building the Next Generation Indian BPC Product — From the Inside Out.
               </p>
             </div>
 
             {/* About */}
+            {/* Quote */}
+            <div
+              className="reveal p-5 border-l-4 border-banawat bg-purple-50"
+              style={{ borderRadius: '0 2px 2px 0' }}
+            >
+              <p className="font-display font-light italic text-lg sm:text-xl text-foreground leading-relaxed">
+                "One wrong claim can unravel years of brand building. The gap between what a formula
+                can deliver, what science can defend, and what packaging promises is where brands
+                get into trouble — not because they intended to mislead, but because these three
+                functions rarely speak to each other before a product goes to market."
+              </p>
+            </div>
+
             <div className="reveal reveal-delay-2">
               <p className="section-label mb-4">About the Workshop</p>
               <div className="space-y-4 text-base font-sans text-muted leading-relaxed">
+                <p>In BPC today, the cost of getting a claim wrong is higher than ever.</p>
                 <p>
-                  One wrong claim can unravel years of brand building. In BPC today, the gap between
-                  what a formula can deliver, what science can defend, and what packaging promises
-                  is where brands get into trouble — not because they intended to mislead, but
-                  because these three functions rarely speak to each other before a product goes to
-                  market.
+                  Neuroscience-backed skincare. Actives-led formulations. Dermat-approved language.
+                  The claims are getting bolder — and the scrutiny is getting sharper. Retailers
+                  delist. Consumers screenshot. Regulators move faster than brands track.
                 </p>
                 <p>
-                  Formula X is a 2-hour working session that exposes that gap — and gives you the
-                  tools to close it.
+                  The problem is rarely the claim itself. It's that the formula, the science, and
+                  the packaging never had a conversation before the product went to market. BANAWAT
+                  puts all three in the same room — and pressure-tests them together.
+                </p>
+                <p>
+                  This is a 2-hour working session. Not a talk. Not a panel. You arrive with a
+                  product or an idea — and you leave with a clear-eyed view of where it stands,
+                  what's defensible, and what needs to change before it goes anywhere near a shelf.
                 </p>
               </div>
             </div>
 
-            {/* What Happens */}
+            {/* What Happens — 9 Blocks */}
             <div className="reveal reveal-delay-3">
-              <p className="section-label mb-4">What Happens</p>
-              <p className="text-base font-sans text-muted leading-relaxed mb-6">
-                The session opens with a crisis scenario — a fictional BPC brand under fire for a
-                claim that science, formulation, and packaging never agreed on. You're placed inside
-                that brand's war room, working alongside experts to diagnose what broke and decide
-                what to do.
+              <p className="section-label mb-2">What Happens</p>
+              <p className="text-sm font-sans text-muted mb-6">
+                Eight blocks. Two hours. Zero filler.
               </p>
-              <p className="text-sm font-sans text-muted mb-4">
-                The room runs across three live expert stations:
-              </p>
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
-                {stations.map((s) => (
+              <div className="space-y-4">
+                {blocks.map((b) => (
                   <div
-                    key={s.label}
-                    className="p-5 bg-purple-50 border border-purple-100"
+                    key={b.number}
+                    className="p-5 bg-background border border-border"
                     style={{ borderRadius: '2px' }}
                   >
-                    <p className="text-2xl mb-2">{s.icon}</p>
-                    <p className="text-banawat text-xs font-sans font-700 tracking-widest uppercase mb-2">
-                      {s.label}
-                    </p>
-                    <p className="text-sm font-sans text-muted leading-relaxed">{s.desc}</p>
+                    <div className="flex items-start gap-4">
+                      <span className="block-badge text-banawat border-banawat/30 shrink-0">
+                        {b.number}
+                      </span>
+                      <div className="flex-1">
+                        <div className="flex items-center gap-2 mb-2">
+                          <p className="font-sans font-700 text-foreground text-sm">{b.title}</p>
+                          <span
+                            className="px-2 py-0.5 bg-purple-50 border border-purple-200 text-banawat text-[10px] font-sans font-600 tracking-widest uppercase"
+                            style={{ borderRadius: '2px' }}
+                          >
+                            {b.tag}
+                          </span>
+                        </div>
+                        <p className="text-sm font-sans text-muted leading-relaxed">{b.desc}</p>
+                      </div>
+                    </div>
                   </div>
                 ))}
               </div>
-              <p className="text-base font-sans text-muted leading-relaxed">
-                Then the simulation ends — and you apply the same framework to your own product or
-                idea, with experts available for direct, honest feedback on your actual brand.
-              </p>
             </div>
 
             {/* What You Leave With */}
@@ -178,9 +231,10 @@ export default function BanawatHero() {
               <p className="section-label mb-4">What You Leave With</p>
               <div className="space-y-3">
                 {[
-                  'A completed audit of one real claim from your brand or pipeline.',
-                  'A framework you can use on every claim before it goes to print.',
-                  'Direct input from two of the most respected practitioners in Indian BPC.',
+                  'A completed audit of one real claim from your brand or pipeline — done in the room.',
+                  'A framework you can apply to every claim before it goes to print.',
+                  'A Formulation Red Flag Checklist — printed, to take away.',
+                  'Direct input from two of the most experienced practitioners in Indian BPC — in a room of under 50 people.',
                 ].map((item, i) => (
                   <div key={i} className="flex items-start gap-3">
                     <span className="mt-2 w-1.5 h-1.5 rounded-full bg-banawat flex-shrink-0" />
@@ -195,11 +249,11 @@ export default function BanawatHero() {
               <p className="section-label mb-4">Who Should Be in This Room</p>
               <div className="flex flex-wrap gap-2 mb-4">
                 {[
-                  'Brand Founders',
+                  'BPC Brand Founders',
                   'Formulators',
-                  'Marketers',
-                  'NPD Leads',
-                  'Anyone building in BPC',
+                  'Marketers & NPD Leads',
+                  'Anyone building, launching or scaling a BPC product',
+                  'Anyone who has ever put a claim on a pack and hoped for the best',
                 ].map((r) => (
                   <span
                     key={r}
@@ -216,22 +270,6 @@ export default function BanawatHero() {
               </p>
             </div>
 
-            {/* A Note */}
-            <div
-              className="reveal p-5 bg-gold-light border border-accent/20"
-              style={{ borderRadius: '2px' }}
-            >
-              <p className="text-xs font-sans font-700 tracking-widest uppercase text-accent mb-2">
-                A Note
-              </p>
-              <p className="text-sm font-sans text-foreground leading-relaxed">
-                The crisis scenario is built around a neuroscience-based skincare claim — one of the
-                most contested spaces in BPC today. The scenario may be updated closer to the event
-                to reflect the most current conversation in the industry. The framework stays the
-                same.
-              </p>
-            </div>
-
             {/* Conducted By */}
             <div className="reveal">
               <p className="section-label mb-5">Conducted By</p>
@@ -241,7 +279,7 @@ export default function BanawatHero() {
                 ))}
               </div>
               <p className="text-xs font-sans text-muted mt-4 italic">
-                One manufacturer. One brand strategist. Both in the room with you.
+                One formulator. One brand strategist. One investor. All three in the room with you.
               </p>
             </div>
           </div>
@@ -260,7 +298,11 @@ export default function BanawatHero() {
                     { icon: '🕛', label: 'Time', value: '12:00 – 2:00 PM' },
                     { icon: '📅', label: 'Date', value: '4 May 2026' },
                     { icon: '📍', label: 'Venue', value: 'Jio World Convention Centre, BKC' },
-                    { icon: '👥', label: 'Experts', value: '2 Expert Facilitators' },
+                    {
+                      icon: '🧱',
+                      label: 'Format',
+                      value: '8 Blocks · Crisis | Real Talk | Case Studies | Live | Play',
+                    },
                   ].map((d) => (
                     <div key={d.label} className="flex items-start gap-3">
                       <span className="text-sm">{d.icon}</span>
@@ -305,6 +347,9 @@ export default function BanawatHero() {
             </div>
           </div>
         </div>
+      </div>
+      <div className="max-w-8xl mx-auto px-6 lg:px-10 py-6">
+        <p className="text-base font-sans text-muted italic text-center">Workshop content and speakers may be updated as needed, while the overarching theme remains intact.</p>
       </div>
     </section>
   );

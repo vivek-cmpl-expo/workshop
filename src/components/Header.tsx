@@ -64,7 +64,7 @@ export default function Header() {
                   Pitch Day
                 </a>
                 <a
-                  href="https://www.cmplexpo.com/pre-register/?sb"
+                  href="https://cmpl.world/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 px-5 py-2.5 border border-gray-900 text-gray-900 text-xs font-sans font-700 tracking-widest uppercase hover:bg-gray-50 transition-colors"
@@ -180,7 +180,7 @@ export default function Header() {
               Pitch Day
             </a>
             <a
-              href="https://www.cmplexpo.com/pre-register/?sb"
+              href="https://cmpl.world/"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-center gap-2 p-4 border border-gray-900 text-gray-900 text-sm font-sans font-600 tracking-widest uppercase"

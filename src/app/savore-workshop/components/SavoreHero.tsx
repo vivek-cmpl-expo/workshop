@@ -257,6 +257,9 @@ export default function SavoreHero() {
 
         </div>
       </div>
+      <div className="max-w-8xl mx-auto px-6 lg:px-10 py-6">
+        <p className="text-base font-sans text-muted italic text-center">Workshop content and speakers may be updated as needed, while the overarching theme remains intact.</p>
+      </div>
     </section>
   );
 }
