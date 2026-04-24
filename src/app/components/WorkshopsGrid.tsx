@@ -67,7 +67,7 @@ const workshops: Workshop[] = [
     date: '4 May 2026',
     time: '2:45 – 4:15 PM',
     venue: 'Special Events Area, Level 3, Jasmine Hall',
-    experts: '2 Experts',
+    experts: '3 Experts',
     audience: ['F&B Brand Founders', 'NPD Teams', 'Food Technologists', 'QSR & Cafe Brands', 'Manufacturers'],
     color: 'text-savore',
     accentBg: 'bg-green-50',

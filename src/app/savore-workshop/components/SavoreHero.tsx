@@ -57,6 +57,20 @@ const speakers = [
     ],
     focusAreas: ['FSSAI Claims', 'Food Safety', 'Regulatory Compliance'],
   },
+  {
+    initials: 'SR',
+    initialsColor: '#15803D',
+    image: '/assets/images/savore/SIDDHARTH RUSTAGI.png',
+    name: 'Siddharth Rustagi',
+    role: 'CO-FOUNDER',
+    company: 'INNOBEV',
+    bullets: [
+      '10+ years in food technology, food science and FMCG production',
+      'Specialist in beverage formulation, food processing and quality systems',
+      'Hands-on experience taking products from R&D to scalable manufacturing',
+    ],
+    focusAreas: ['Food Technology', 'Beverage Formulation', 'Food Processing', 'Quality Systems'],
+  },
 ];
 
 export default function SavoreHero() {
