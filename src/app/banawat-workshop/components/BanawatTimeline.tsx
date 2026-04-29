@@ -72,7 +72,7 @@ export default function BanawatTimeline() {
         {/* CTA */}
         <div className="mt-12 reveal reveal-delay-2 flex flex-col sm:flex-row gap-4">
           <a
-            href="https://www.cmplexpo.com/cmpl-workshops-2026/?wm26"
+            href="https://workshops.cmplexpo.com/from/public"
             className="inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-banawat text-white text-xs font-sans font-600 tracking-widest uppercase hover:opacity-90 transition-opacity"
             style={{ borderRadius: '2px' }}
           >
