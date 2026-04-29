@@ -253,7 +253,7 @@ export default function SavoreHero() {
               </div>
               <hr className="border-border" />
               <a
-                href="https://workshops.cmplexpo.com/from/public"
+                href="https://workshops.cmplexpo.com/form/public"
                 className="block w-full text-center px-5 py-3 bg-savore text-white text-xs font-sans font-600 tracking-widest uppercase hover:opacity-90 transition-opacity"
                 style={{ borderRadius: '2px' }}
               >

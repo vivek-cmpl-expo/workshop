@@ -185,7 +185,7 @@ export default function UnpackCompliance() {
         {/* CTA */}
         <div className="reveal reveal-delay-2 flex flex-col sm:flex-row gap-4">
           <a
-            href="https://workshops.cmplexpo.com/from/public"
+            href="https://workshops.cmplexpo.com/form/public"
             className="inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-unpack text-white text-xs font-sans font-600 tracking-widest uppercase hover:opacity-90 transition-opacity"
             style={{ borderRadius: '2px' }}
           >
