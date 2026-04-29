@@ -72,7 +72,7 @@ export default function LaunchpadAudience() {
         {/* CTA */}
         <div className="reveal reveal-delay-2 flex flex-col sm:flex-row gap-4">
           <a
-            href="https://workshops.cmplexpo.com/form/public"
+            href="https://workshops.cmplexpo.com/form/public/apply"
             className="inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-launchpad text-white text-xs font-sans font-600 tracking-widest uppercase hover:opacity-90 transition-opacity"
             style={{ borderRadius: '2px' }}
           >

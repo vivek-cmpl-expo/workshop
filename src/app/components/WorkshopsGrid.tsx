@@ -292,7 +292,7 @@ export default function WorkshopsGrid() {
                     </svg>
                   </Link>
                   <a
-                    href="https://workshops.cmplexpo.com/form/public"
+                    href="https://workshops.cmplexpo.com/form/public/apply"
                     target="_blank"
                     rel="noopener noreferrer"
                     className={`inline-flex items-center gap-2 px-6 py-3 text-sm font-sans font-600 tracking-widest uppercase text-white ${w.tagBg} hover:opacity-90 transition-opacity`}
