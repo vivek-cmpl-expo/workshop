@@ -75,7 +75,7 @@ export default function HeroSection() {
           className="font-display font-light italic text-primary leading-none tracking-tight reveal reveal-delay-1 mb-0"
           style={{ fontSize: 'clamp(2.5rem, 10vw, 5rem)', lineHeight: '0.9' }}
         >
-          The CMPL Workshop Series
+          The CMPL Workshop Series - Mumbai 2026
         </h1>
       
 
